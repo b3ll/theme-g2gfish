@@ -1,3 +1,11 @@
+function __fast_hg_prompt
+  type -q vcprompt
+  set -l has_vcprompt $status
+  if test $has_vcprompt -eq 0
+    vcprompt -t 150 -f "[%b]"
+  end
+end
+
 function fish_prompt
   # Cache exit status
   set -l last_status $status
@@ -18,6 +26,8 @@ function fish_prompt
   # Setup colors
   set -l normal (set_color normal)
   set -l cyan (set_color cyan)
+  set -l blue (set_color blue)
+  set -l green (set_color green)
   set -l yellow (set_color yellow)
   set -l bpurple (set_color -o purple)
   set -l bred (set_color -o red)
@@ -35,11 +45,11 @@ function fish_prompt
   end
 
   # Top
-  echo -n $cyan$USER$normal at $yellow$__fish_prompt_hostname$normal in $bred(prompt_pwd)$normal
-  __fish_git_prompt
+  echo
+  echo -n $blue(prompt_pwd)$normal $green(__fast_hg_prompt)$normal
 
   echo
 
   # Bottom
-  echo -n $pcolor$__fish_prompt_char $normal
+  echo -n $normal(date "+$c2%H$c0:$c2%M$c0")$normal $yellow$__fish_prompt_hostname$normal $cyan$USER$normal $pcolor$__fish_prompt_char $normal
 end

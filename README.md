@@ -1,8 +1,10 @@
-## cbjohnson theme
+## g2gfish theme
 
-A minimal theme forked from the [yimmy][yimmy-commit] theme (thanks [jhillyerd][yimmy-author]!)
+A minimal theme forked from the [cbjohnson][cbjohnson-theme] theme that supports the superfast [vcprompt][vcprompt-tool] tool for speed when working with larger VCS repositories.
 
-![screenshot](https://cloud.githubusercontent.com/assets/4823640/5327427/6f9e61bc-7d02-11e4-9223-38ddbed176c8.png)
+Set the emoji in the prompt using `set -g __fish_prompt_char "🔥"`
 
-[yimmy-commit]: https://github.com/bpinto/oh-my-fish/tree/3a4b7de689cabf3522227f51177a489d915c8b4d/themes/yimmy
-[yimmy-author]: https://github.com/jhillyerd
+![theme-screenshot](/screenshot.png?raw=true "Theme Screenshot")
+
+[cbjohnson-theme]: https://github.com/oh-my-fish/theme-cbjohnson
+[vcprompt-tool]: http://hg.gerg.ca/vcprompt/file/tip
