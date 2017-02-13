@@ -1,4 +1,9 @@
 function __fast_hg_prompt
+  if test -e /usr/local/bin/scm-prompt
+      bash -c 'source "/usr/local/bin/scm-prompt" && _dotfiles_scm_info "[%s]"'
+      return
+  end
+
   type -q vcprompt
   set -l has_vcprompt $status
   if test $has_vcprompt -eq 0
