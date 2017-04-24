@@ -1,6 +1,6 @@
 function __fast_hg_prompt
   if test -e /usr/local/bin/scm-prompt
-      bash -c 'source "/usr/local/bin/scm-prompt" && _dotfiles_scm_info "[%s]"'
+      bash -c 'source "/usr/local/bin/scm-prompt" && _scm_prompt "[%s]"'
       return
   end
 
